@@ -49,7 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(height: 8.0),
+          SizedBox(height: 20.0),
           Text(
             message.text,
             style: TextStyle(
@@ -84,14 +84,15 @@ class _ChatScreenState extends State<ChatScreen> {
   _buildMessageComposer() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8.0),
-      height: 70.0,
+      height: 60.0,
       color: Colors.white,
       child: Row(
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.photo),
+            icon: Icon(Icons.add),
             iconSize: 25.0,
-            color: Theme.of(context).primaryColor,
+            color: Colors.red,
+            // color: Theme.of(context).primaryColor,
             onPressed: () {},
           ),
           Expanded(
@@ -99,12 +100,12 @@ class _ChatScreenState extends State<ChatScreen> {
               textCapitalization: TextCapitalization.sentences,
               onChanged: (value) {},
               decoration: InputDecoration.collapsed(
-                hintText: 'Send a message...',
+                hintText: 'Write a message ...',
               ),
             ),
           ),
           IconButton(
-            icon: Icon(Icons.send),
+            icon: Icon(Icons.arrow_forward),
             iconSize: 25.0,
             color: Theme.of(context).primaryColor,
             onPressed: () {},
@@ -119,21 +120,30 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
+        leading: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xff251B37),
         title: Text(
           widget.user.name,
           style: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.bold,
-          ),
+              fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.more_horiz),
+            icon: Icon(Icons.video_call),
             iconSize: 30.0,
             color: Colors.white,
             onPressed: () {},
           ),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.call,
+                color: Colors.white,
+              ))
         ],
       ),
       body: GestureDetector(

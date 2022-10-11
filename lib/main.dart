@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_ui/chatpage.dart';
+import 'package:flutter_chat_ui/screens/chat_screen.dart';
 import 'package:flutter_chat_ui/screens/home_screen.dart';
 import 'package:flutter_chat_ui/second.dart';
 
@@ -9,14 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Chat UI',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        // primarySwatch: Colors.white
-        accentColor: Colors.white,
-      ),
-      home: HomeScreen(),
-    );
+        title: 'Flutter Chat UI',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.white,
+          // primarySwatch: Colors.white
+          accentColor: Colors.white,
+        ),
+        home: Second()
+        //HomeScreen(),
+        // ChatScreen(),
+        );
   }
 }

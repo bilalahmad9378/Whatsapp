@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //Some changes
     return MaterialApp(
         title: 'Flutter Chat UI',
         debugShowCheckedModeBanner: false,

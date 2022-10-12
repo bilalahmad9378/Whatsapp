@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
         primarySwatch: Colors.grey,
       ),
       home: Scaffold(
+        
         backgroundColor: Color(0xFF06283D),
         body: Column(
           children: <Widget>[
